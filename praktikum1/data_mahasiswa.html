@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+
+    <!-- CSS untuk mengatur tampilan halaman -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            color: #263449;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #1a56b0;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #1a56b0;
+            border-bottom: 2px solid #dce7f8;
+            padding-bottom: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #b9c7da;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .pilihan {
+            margin-top: 6px;
+        }
+
+        .pilihan label {
+            display: inline-block;
+            margin-right: 18px;
+            font-weight: normal;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1a56b0;
+            color: white;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #64748b;
+            margin-left: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background-color: #1a56b0;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Class untuk memberi warna pada baris tertentu */
+        .baris-aktif {
+            background-color: #eaf2ff;
+        }
+
+        .catatan {
+            margin-top: 18px;
+            padding: 12px;
+            background-color: #f2f6fc;
+            border-left: 4px solid #1a56b0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir dan Data Mahasiswa</h1>
+
+        <!-- Formulir untuk memasukkan data mahasiswa -->
+        <h2>Formulir Mahasiswa</h2>
+        <form action="#" method="post">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM">
+
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com">
+
+            <label>Jenis Kelamin</label>
+            <div class="pilihan">
+                <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+                <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+            </div>
+
+            <label>Hobi</label>
+            <div class="pilihan">
+                <label><input type="checkbox" name="hobi" value="Membaca"> Membaca</label>
+                <label><input type="checkbox" name="hobi" value="Olahraga"> Olahraga</label>
+                <label><input type="checkbox" name="hobi" value="Musik"> Musik</label>
+            </div>
+
+            <label for="prodi">Program Studi</label>
+            <select id="prodi" name="prodi">
+                <option value="">-- Pilih Program Studi --</option>
+                <option value="Teknologi Informasi">Teknologi Informasi</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+            </select>
+
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat"></textarea>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <!-- Tabel contoh berisi data lima mahasiswa -->
+        <h2>Daftar Data Mahasiswa</h2>
+        <table>
+            <caption>Data Mahasiswa dan IPK</caption>
+            <tr>
+                <th>No</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Program Studi</th>
+                <th>IPK</th>
+            </tr>
+            <tr class="baris-aktif">
+                <td>1</td>
+                <td>252520026</td>
+                <td>Yoga Asep Triyadi</td>
+                <td>Teknologi Informasi</td>
+                <td>3.75</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>252520034</td>
+                <td>Chanif Shafarudin</td>
+                <td>Teknologi Informasi</td>
+                <td>3.60</td>
+            </tr>
+            <tr class="baris-aktif">
+                <td>3</td>
+                <td>252520048</td>
+                <td>Agita Hanif Prasaja</td>
+                <td>Teknologi Informasi</td>
+                <td>3.80</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>252520053</td>
+                <td>Ramdhan Qurniawan</td>
+                <td>Teknologi Informasi</td>
+                <td>3.55</td>
+            </tr>
+            <tr class="baris-aktif">
+                <td>5</td>
+                <td>252520074</td>
+                <td>Devi Wiko Astriana</td>
+                <td>Teknologi Informasi</td>
+                <td>3.70</td>
+            </tr>
+            <!-- colspan menggabungkan lima kolom menjadi satu -->
+            <tr>
+                <td colspan="4"><strong>Jumlah mahasiswa</strong></td>
+                <td><strong>5</strong></td>
+            </tr>
+        </table>
+
+        <div class="catatan">
+            <strong>Catatan:</strong> Data mahasiswa dan IPK di atas hanya contoh untuk latihan.
+            Formulir ini merupakan contoh tampilan HTML; pengiriman data sungguhan memerlukan backend/server.
+        </div>
+    </div>
+</body>
+</html>

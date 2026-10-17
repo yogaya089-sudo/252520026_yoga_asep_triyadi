@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Peserta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8ff;
+            margin: 0;
+            padding: 30px;
+            color: #263449;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 24px;
+            background: white;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #1a56b0;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 9px;
+            border: 1px solid #ccd5e2;
+            border-radius: 4px;
+        }
+        .radio label {
+            display: inline-block;
+            margin-right: 14px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 9px 16px;
+            background: #1a56b0;
+            color: white;
+            border: 0;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background: #1a56b0;
+            color: white;
+        }
+        th, td {
+            border: 1px solid #ccd5e2;
+            padding: 9px;
+            text-align: left;
+        }
+        .baris-aktif { background: #e6eefb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Peserta</h1>
+
+        <!-- Form pendaftaran sesuai ketentuan praktikum -->
+        <form action="#" method="post">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
+
+            <label>Jenis Kelamin</label>
+            <div class="radio">
+                <label><input type="radio" name="jk" value="L"> Laki-laki</label>
+                <label><input type="radio" name="jk" value="P"> Perempuan</label>
+            </div>
+
+            <label for="jurusan">Jurusan</label>
+            <select id="jurusan" name="jurusan">
+                <option value="">-- Pilih Jurusan --</option>
+                <option>Teknologi Informasi</option>
+                <option>Informatika</option>
+                <option>Sistem Informasi</option>
+            </select>
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <!-- Tabel memiliki tiga kolom dan dua baris data -->
+        <h2>Daftar Peserta</h2>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+            </tr>
+            <tr class="baris-aktif">
+                <td>1</td>
+                <td>Andi</td>
+                <td>Teknologi Informasi</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Siti</td>
+                <td>Sistem Informasi</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
